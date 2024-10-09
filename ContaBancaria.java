@@ -9,7 +9,7 @@
     protected String numConta, titular;
     protected Double saldo;
 
-    public Contabancaria(String numConta, String titular, Double saldo){
+    public ContaBancaria(String numConta, String titular, Double saldo){
         this.numConta = numConta;
         this.titular = titular;
         this.saldo = saldo;
@@ -17,26 +17,32 @@
 
     public void depositar(Double valor){
         saldo = saldo+valor;
-        JOptionPane.showMessageDialog("Depósito realizado com sucesso");
+        System.out.println("Depósito realizado com sucesso");
     }
 
     public void sacar(Double valor){
         if(saldo == 0){
-            JOptionPane.showMessageDialog(null, "Seu saldo se encontra vazio");
+            System.out.println("Seu saldo se encontra vazio");
         }
         else{
             if(valor>saldo){
-                JOptionPane.showMessageDialog("O valor requisitado é maior do que o disponível na conta");
+                System.out.println("O valor requisitado é maior do que o disponível na conta");
             }
             else{
                 saldo = saldo - valor;
-                JOptionPane.showMessageDialog("Seu saque foi realizado com sucesso!");
+                System.out.println("Seu saque foi realizado com sucesso!");
                 exibirSaldo();
             }
         }
     }
 
     public void exibirSaldo(){
-        JOptionPane.showMessageDialog("O saldo atual da conta é de: " + saldo);
+        System.out.println("O saldo atual da conta é de: " + saldo);
+    }
+
+    public void exibirDadosConta(){
+        System.out.println("Número da conta: " + numConta);
+        System.out.println("Titular da conta: " + titular);
+        exibirSaldo();
     }
  }

@@ -14,17 +14,25 @@
     @Override
     public void sacar(Double valor){
         if(saldo<(-1*limite)){
-            JOptionPane.showMessageDialog("Seu saldo está abaixo do limite estabelecido");
+            System.out.println("Seu saldo está abaixo do limite estabelecido");
         }
         else{
             if((saldo-valor)<(-1*limite)){
-                JOptionPane.showMessageDialog("O valor requisitado ultrapassa o seu limite");
+                System.out.println("O valor requisitado ultrapassa o seu limite");
             }
             else{
                 saldo = saldo - valor;
-                JOptionPane.showMessageDialog("O saque foi realizado com sucesso");
+                System.out.println("O saque foi realizado com sucesso");
                 exibirSaldo();
             }
         }
+    }
+
+    @Override
+    public void exibirDadosConta(){
+        System.out.println("Número da conta: " + numConta);
+        System.out.println("Titular da conta: " + titular);
+        exibirSaldo();
+        System.out.println("Limite atual da conta: " + limite);
     }
  }

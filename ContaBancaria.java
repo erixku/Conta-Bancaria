@@ -3,8 +3,6 @@
  * Classe para criação de contas bancárias simples, com finalidade de especialização posteriormente
  */
 
- import javax.swing.*;
-
  public class ContaBancaria {
     protected String numConta, titular;
     protected Double saldo;

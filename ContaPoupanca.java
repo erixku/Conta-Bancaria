@@ -1,5 +1,3 @@
-import javax.swing.JOptionPane;
-
 /**
  * Classe para especializar e extender a classe Conta Bancária
  * @author Erick Gomes Barbosa
@@ -16,6 +14,7 @@ import javax.swing.JOptionPane;
     public void aplicarRendimento(){
         saldo = saldo + (saldo*(taxaDeJuros/100));
         System.out.println("Rendimento aplicado com sucesso");
+        exibirSaldo();
     }
 
     @Override

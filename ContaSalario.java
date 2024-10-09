@@ -1,4 +1,3 @@
-import javax.swing.JOptionPane;
 
 /**
  * Classe para especializar e extender a classe Conta Bancária
@@ -32,6 +31,7 @@ import javax.swing.JOptionPane;
                     exibirSaldo();
                 }
             }
+            qtdSaque -= 1;
         }
     }
  }
